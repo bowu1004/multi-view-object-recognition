@@ -1,0 +1,24 @@
+
+ref1: https://blog.csdn.net/gls_nuaa/article/details/108642940
+ref2: https://blog.csdn.net/liujy20/article/details/122363300
+
+
+#注意：大小写一定要区分，完全按照下面的输入
+pip install PyQt5
+pip install pyqt5-tools
+pip install lxml      #在正常下载anaconda3的情况下,lxml应该已经具备
+pip install labelImg
+
+解决方法
+1.卸载python-qt5
+pip uninstall python-qt5
+
+2.将PyQt5先卸载，再重新安装，否则可能会出现“ModuleNotFoundError: No module named ‘PyQt5.QtCore’”的错误
+pip uninstall PyQt5
+pip install PyQt5 -i https://pypi.tuna.tsinghua.edu.cn/simple/
+pip install pyqt5-tools -i https://pypi.tuna.tsinghua.edu.cn/simple/
+
+pip install labelImg -i https://pypi.tuna.tsinghua.edu.cn/simple/
+
+然后启动labeling
+$labelimg
